@@ -1,0 +1,1 @@
+#recuperar os gets e sets do model
