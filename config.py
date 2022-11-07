@@ -1,0 +1,10 @@
+
+DEBUG = True
+
+#Configs banco de dados
+USERNAME = ''
+PASSWORD = ''
+SERVER = ''
+DATABASE = ''
+
+SQLALCHEMY_DATABASE_URI = f'mysql://{USERNAME}:{PASSWORD}@{SERVER}/{DATABASE}'
