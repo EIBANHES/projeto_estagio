@@ -1,10 +1,10 @@
-# flask
+
 DEBUG = True
 
-#Configs banco de dados
+# Configurações do banco de dados
 USERNAME = 'root'
 PASSWORD = ''
 SERVER = 'localhost'
-DATABASE = 'sistema_controle_estagiario'
+DATABASE = 'sistema_controle_estagiarios'
 
 SQLALCHEMY_DATABASE_URI = f'mysql://{USERNAME}:{PASSWORD}@{SERVER}/{DATABASE}'

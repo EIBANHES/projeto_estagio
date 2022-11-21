@@ -1,5 +1,5 @@
 from backend_api import app
 
-#verificando se esta na main, se for true vai rodar a main
-if __name__ == '__main__':
+# verificando se está na main. se for True vai rodar o app
+if __name__ == "__main__":
     app.run()

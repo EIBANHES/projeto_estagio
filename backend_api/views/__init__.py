@@ -1,1 +1,0 @@
-#logica do negcio

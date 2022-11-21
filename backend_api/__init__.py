@@ -1,26 +1,24 @@
-#criar app
 from flask import Flask
-from flask_restful import Api #PARA A API
-from flask_sqlalchemy import SQLAlchemy #para o banco de dados
-from flask_migrate import Migrate #para o bando de dados
-from flask_marshmallow import Marshmallow #para o schema
+from flask_restful import Api               # para a API
+from flask_sqlalchemy import SQLAlchemy     # para o banco de dados
+from flask_migrate import Migrate           # para o banco de dados
+from flask_marshmallow import Marshmallow   # para o schema
 
-#instancia do flask 
+
+# instancia do flask
 app = Flask(__name__)
+# importando configurações do arquivo config.py da raiz
+app.config.from_object('config')    
 
-#importando configurações do projeto -> config.py
-app.config.from_object('config')
-
-
-#instancias para o banco de dados
-#instancia do SQLAlchemy
+# Instancias para o banco de dados
 db = SQLAlchemy(app)
-
-#Instancia do marshmallow
 ma = Marshmallow(app)
 
 migrate = Migrate(app, db)
 
-#instancia da api
+# intância da API
 api = Api(app)
 
+# para detectar no migrate
+from .models import estagiario_origem_model
+from .views import estagiario_origem_view
